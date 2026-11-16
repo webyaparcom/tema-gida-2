@@ -1,0 +1,115 @@
+<section class="modulex-surec-gonderi-yolculuk{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-surec-gonderi-yolculuk-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* surec-gonderi-yolculuk — surec-yol-haritasi duraksız zikzak kartlı durağan bir rota, surec-ilerleme-cizgi kaydırmayla dolan çıplak bir hattır; bu modülde kaydırmaya bağlı hareket eden araç simgesi, boyanan yol izi ve «ulaşıldı» durumuna geçen durak pulları var — gönderi takibi metaforu. */
+  .modulex-surec-gonderi-yolculuk { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-surec-gonderi-yolculuk *, .modulex-surec-gonderi-yolculuk *::before, .modulex-surec-gonderi-yolculuk *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-surec-gonderi-yolculuk :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-surec-gonderi-yolculuk :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-surec-gonderi-yolculuk :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-surec-gonderi-yolculuk :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-surec-gonderi-yolculuk img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-surec-gonderi-yolculuk) img { height: auto; }
+  .modulex-surec-gonderi-yolculuk [hidden] { display: none !important; }
+  .modulex-surec-gonderi-yolculuk :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-surec-gonderi-yolculuk :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-surec-gonderi-yolculuk-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-surec-gonderi-yolculuk-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-surec-gonderi-yolculuk--bassiz .modulex-surec-gonderi-yolculuk-bas { display: none; }
+  .modulex-surec-gonderi-yolculuk-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-surec-gonderi-yolculuk-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-surec-gonderi-yolculuk-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-surec-gonderi-yolculuk-bas { max-width: 780px; margin-inline: auto; text-align: center; justify-items: center; }
+  .modulex-surec-gonderi-yolculuk-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-surec-gonderi-yolculuk-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-surec-gonderi-yolculuk-dugme:hover { transform: translateY(-2px); }
+  .modulex-surec-gonderi-yolculuk-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-surec-gonderi-yolculuk-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-surec-gonderi-yolculuk-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-surec-gonderi-yolculuk-rota { --yol: 0; position: relative; padding-block-start: 52px; }
+  .modulex-surec-gonderi-yolculuk-yol { position: absolute; inset-block-start: 66px; inset-inline: calc(100% / (2 * var(--n, 4))); height: 12px; border-radius: 999px; background: color-mix(in srgb, --text-- 18%, --bg--); }
+  .modulex-surec-gonderi-yolculuk-yol::after { content: ""; position: absolute; inset-inline: 8px; inset-block-start: 50%; height: 2px; margin-block-start: -1px; background-image: repeating-linear-gradient(90deg, --bg-- 0 12px, transparent 12px 22px); }
+  .modulex-surec-gonderi-yolculuk-iz { position: absolute; inset-block: 0; inset-inline-start: 0; width: calc(var(--yol) * 100%); border-radius: inherit; background: --accent--; transition: width 0.25s linear; }
+  .modulex-surec-gonderi-yolculuk-arac { position: absolute; inset-block-end: 100%; inset-inline-start: calc(var(--yol) * 100%); z-index: 2; display: grid; place-items: center; width: 52px; height: 40px; margin-inline-start: -26px; margin-block-end: 2px; color: --accentInk--; transition: inset-inline-start 0.25s linear, inset-block-start 0.25s linear; }
+  .modulex-surec-gonderi-yolculuk-arac .material-symbols-outlined { font-size: 40px; }
+  .modulex-surec-gonderi-yolculuk-duraklar { position: relative; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); }
+  .modulex-surec-gonderi-yolculuk-durak { position: relative; display: grid; justify-items: center; align-content: start; gap: 16px; padding-inline: 8px; text-align: center; }
+  .modulex-surec-gonderi-yolculuk-pul { position: relative; z-index: 1; display: grid; place-items: center; width: 40px; height: 40px; border: 3px solid --accent--; border-radius: 50%; background: --bg--; color: --accentInk--; font-size: 0.95rem; font-weight: 800; font-variant-numeric: tabular-nums; transition: transform 0.3s ease; }
+  .modulex-surec-gonderi-yolculuk-pikon { font-size: 20px; }
+  .modulex-surec-gonderi-yolculuk-tik { position: absolute; inset: -3px; display: grid; place-items: center; border-radius: 50%; background: --accent--; color: --accentText--; font-size: 22px; opacity: 0; transform: scale(0.4); transition: opacity 0.3s ease, transform 0.3s ease; }
+  .modulex-surec-gonderi-yolculuk-durak--var .modulex-surec-gonderi-yolculuk-tik { opacity: 1; transform: none; }
+  .modulex-surec-gonderi-yolculuk-durak:hover .modulex-surec-gonderi-yolculuk-pul { transform: scale(1.1); }
+  .modulex-surec-gonderi-yolculuk-bilgi { display: grid; justify-items: center; gap: 6px; width: 100%; padding: 16px 14px 18px; border-radius: --yuvarlak--; background: --bg--; transition: box-shadow 0.3s ease; }
+  .modulex-surec-gonderi-yolculuk-durak--var .modulex-surec-gonderi-yolculuk-bilgi { box-shadow: inset 0 3px 0 --accent--; }
+  .modulex-surec-gonderi-yolculuk-kbaslik { font-size: 1.05rem; font-weight: 750; }
+  .modulex-surec-gonderi-yolculuk-kmetin { color: --muted--; font-size: 0.9rem; }
+  .modulex-surec-gonderi-yolculuk-bilgi .modulex-surec-gonderi-yolculuk-sure { justify-self: center; }
+  @media (max-width: 1024px) { .modulex-surec-gonderi-yolculuk-durak { padding-inline: 5px; } .modulex-surec-gonderi-yolculuk-bilgi { padding: 14px 10px 16px; } }
+  @media (max-width: 768px) {
+    .modulex-surec-gonderi-yolculuk-rota { padding-block-start: 0; padding-inline-start: 64px; }
+    .modulex-surec-gonderi-yolculuk-yol { inset-block: 20px; inset-inline: 22px auto; width: 12px; height: auto; }
+    .modulex-surec-gonderi-yolculuk-yol::after { inset-inline: auto; inset-inline-start: 50%; inset-block: 8px; width: 2px; height: auto; margin-block-start: 0; margin-inline-start: -1px; background-image: repeating-linear-gradient(180deg, --bg-- 0 12px, transparent 12px 22px); }
+    .modulex-surec-gonderi-yolculuk-iz { inset-inline: 0; inset-block-end: auto; width: auto; height: calc(var(--yol) * 100%); }
+    .modulex-surec-gonderi-yolculuk-arac { inset-block-end: auto; inset-block-start: calc(var(--yol) * 100%); inset-inline-start: 50%; width: 44px; height: 44px; margin-block: -22px 0; margin-inline-start: -22px; border: 3px solid --bg--; border-radius: 50%; background: --accent--; color: --accentText--; }
+    .modulex-surec-gonderi-yolculuk-arac .material-symbols-outlined { font-size: 24px; }
+    .modulex-surec-gonderi-yolculuk-duraklar { grid-auto-flow: row; gap: 18px; }
+    .modulex-surec-gonderi-yolculuk-durak { justify-items: stretch; padding-inline: 0; text-align: start; }
+    .modulex-surec-gonderi-yolculuk-pul { position: absolute; inset-block-start: 0; inset-inline-start: -56px; }
+    .modulex-surec-gonderi-yolculuk-bilgi { justify-items: start; padding: 14px 16px; }
+    .modulex-surec-gonderi-yolculuk-bilgi .modulex-surec-gonderi-yolculuk-sure { justify-self: start; }
+  }
+  .modulex-surec-gonderi-yolculuk-sure { display: inline-flex; align-items: center; gap: 6px; justify-self: start; width: fit-content; padding: 4px 12px; border-radius: 999px; background: color-mix(in srgb, --accent-- 12%, transparent); color: --text--; font-size: 0.85rem; font-weight: 600; }
+  .modulex-surec-gonderi-yolculuk-sure .material-symbols-outlined { font-size: 18px; color: --accentInk--; }
+  .modulex-surec-gonderi-yolculuk-etiket { color: --accentInk--; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+
+  .modulex-surec-gonderi-yolculuk-bag { color: inherit; text-decoration: none; }
+  .modulex-surec-gonderi-yolculuk-bag::after { content: ""; position: absolute; inset: 0; z-index: 3; }
+  .modulex-surec-gonderi-yolculuk-bag:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-surec-gonderi-yolculuk :is(.modulex-surec-gonderi-yolculuk-baslik, .modulex-surec-gonderi-yolculuk-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-surec-gonderi-yolculuk-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-surec-gonderi-yolculuk { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-surec-gonderi-yolculuk *, .modulex-surec-gonderi-yolculuk *::before, .modulex-surec-gonderi-yolculuk *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-surec-gonderi-yolculuk";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const yolculuk = (s, P, az) => {
+        const r = s.querySelector("[data-yolculuk]");
+        if (!r || az) return;
+        const d = [...r.querySelectorAll("." + P + "-durak")];
+        s.classList.add(P + "--yjs");
+        let bekle = false;
+        const hesap = () => {
+          bekle = false;
+          const b = r.getBoundingClientRect();
+          const vh = window.innerHeight || 800;
+          const p = Math.max(0, Math.min(1, (vh * 0.8 - b.top) / Math.max(1, b.height + vh * 0.2)));
+          r.style.setProperty("--yol", p.toFixed(3));
+          d.forEach((x, i) => x.classList.toggle(P + "-durak--var", p >= (d.length > 1 ? i / (d.length - 1) : 0) - 0.02));
+        };
+        window.addEventListener("scroll", () => { if (!bekle) { bekle = true; requestAnimationFrame(hesap); } }, { passive: true });
+        window.addEventListener("resize", hesap);
+        hesap();
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      yolculuk(s, P, az);
+    });
+  })();
+</script>

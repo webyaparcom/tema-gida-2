@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "id": "eploi6n954",
+      "name": {
+        "tr": "Katalog",
+        "en": "Catalogue",
+        "ar": "الكتالوج"
+      },
+      "description": {
+        "tr": "Sekiz ürünün etiket bilgileri ve taze parti takvimi.",
+        "en": "Label details of eight products and the fresh batch calendar.",
+        "ar": "بيانات بطاقات ثمانية منتجات وتقويم الدفعات الطازجة."
+      },
+      "path": "hizmetler",
+      "icon": "work",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "vsgvue",
+          "q44rj7"
+        ],
+        "footer": []
+      },
+      "index": 0
+    },
+    {
+      "name": {
+        "tr": "Firma",
+        "en": "Company",
+        "ar": "الشركة"
+      },
+      "status": "play",
+      "id": "hakkimizda",
+      "path": "hakkimizda",
+      "category": "",
+      "url": "",
+      "index": 1,
+      "icon": "info",
+      "desing": {
+        "header": [],
+        "body": [
+          "qn2thp",
+          "eicgmr",
+          "3nysqq"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "İlkeler, yıllık tartı ve sevkiyat yolu (kurgusal).",
+        "en": "Principles, the yearly weighing and the dispatch route (fictional).",
+        "ar": "المبادئ والوزن السنوي ومسار الشحن (افتراضي)."
+      }
+    },
+    {
+      "id": "r18506ce18",
+      "name": {
+        "tr": "Referanslar",
+        "en": "References",
+        "ar": "المرجعيات"
+      },
+      "description": {
+        "tr": "İş ortaklarımız ve müşteri yorumlarımız (kurgusal).",
+        "en": "Our partners and customer reviews (fictional).",
+        "ar": "شركاؤنا وتقييمات عملائنا (افتراضية)."
+      },
+      "path": "referanslar",
+      "icon": "stars",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "pdir28",
+          "q44rj7"
+        ],
+        "footer": []
+      },
+      "index": 2
+    },
+    {
+      "name": {
+        "tr": "İletişim",
+        "en": "Contact",
+        "ar": "اتصل بنا"
+      },
+      "status": "play",
+      "id": "iletisim",
+      "path": "iletisim",
+      "category": "",
+      "url": "",
+      "index": 3,
+      "icon": "call",
+      "desing": {
+        "header": [],
+        "body": [
+          "sejvlo",
+          "k8mp01"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Teklif, adres ve satış saatleri.",
+        "en": "Quote, address and sales hours.",
+        "ar": "عرض السعر والعنوان وساعات المبيعات."
+      }
+    }
+  ],
+  "desc": []
+}

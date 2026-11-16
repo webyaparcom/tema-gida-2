@@ -1,0 +1,46 @@
+{
+  "id": "misyon",
+  "name": {
+    "tr": "Misyon",
+    "en": "Mission",
+    "ar": "المهمة"
+  },
+  "description": {
+    "tr": "Misyonumuz",
+    "en": "Our mission",
+    "ar": "مهمتنا"
+  },
+  "keyword": {
+    "tr": "Misyon",
+    "en": "mission, our mission, corporate responsibility",
+    "ar": "الرسالة, رسالتنا, المسؤولية المؤسسية"
+  },
+  "path": "misyon",
+  "icon": "flag",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [],
+    "footer": []
+  },
+  "index": 0,
+  "url": "",
+  "text": {
+    "tr": "<h2>Misyonumuz</h2>\n<p>Antep mutfağının ürünlerini açık etiketle ve izlenebilir partilerle işletmelere ulaştırmak.</p>",
+    "en": "<h2>Our mission</h2>\n<p>To bring Antep cuisine products to businesses with open labels and traceable batches.</p>",
+    "ar": "<h2>مهمتنا</h2>\n<p>إيصال منتجات مطبخ عنتاب إلى المنشآت ببطاقات واضحة ودفعات قابلة للتتبع.</p>"
+  },
+  "title": {
+    "tr": "Misyon",
+    "en": "Mission",
+    "ar": "المهمة"
+  },
+  "date": "2026-11-16T18:14:10.126Z",
+  "update": "2026-11-16T18:18:00.113Z",
+  "sablonIzi": "a8a6ac234dced5af",
+  "sablonIziDil": {
+    "en": "3f5f6c628dec679f",
+    "ar": "c861990d3945ecd7"
+  }
+}

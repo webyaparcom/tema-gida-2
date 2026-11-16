@@ -1,0 +1,48 @@
+{
+  "name": {
+    "tr": "Firma",
+    "en": "Company",
+    "ar": "الشركة"
+  },
+  "status": "play",
+  "category": "",
+  "id": "hakkimizda",
+  "url": "",
+  "path": "hakkimizda",
+  "index": 1,
+  "icon": "info",
+  "desing": {
+    "header": [],
+    "body": [
+      "qn2thp",
+      "eicgmr",
+      "3nysqq"
+    ],
+    "footer": []
+  },
+  "pathnext": "",
+  "description": {
+    "tr": "İlkeler, yıllık tartı ve sevkiyat yolu (kurgusal).",
+    "en": "Principles, the yearly weighing and the dispatch route (fictional).",
+    "ar": "المبادئ والوزن السنوي ومسار الشحن (افتراضي)."
+  },
+  "spot": {
+    "tr": "",
+    "en": "",
+    "ar": ""
+  },
+  "desc": {},
+  "title": {
+    "tr": "Firma",
+    "en": "Company",
+    "ar": "الشركة"
+  },
+  "keyword": {
+    "tr": "hakkımızda",
+    "en": "about",
+    "ar": "من نحن"
+  },
+  "text": {},
+  "update": "2026-11-16T18:18:00.099Z",
+  "date": "2026-10-30"
+}

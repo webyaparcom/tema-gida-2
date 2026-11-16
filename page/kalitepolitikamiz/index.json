@@ -1,0 +1,46 @@
+{
+  "id": "kalitepolitikamiz",
+  "name": {
+    "tr": "Kalite Politikamız",
+    "en": "Quality Policy",
+    "ar": "سياسة الجودة"
+  },
+  "description": {
+    "tr": "Kalite politikamız",
+    "en": "Our quality policy",
+    "ar": "سياسة الجودة لدينا"
+  },
+  "keyword": {
+    "tr": "Kalite Politikamız",
+    "en": "quality policy, quality, continuous improvement",
+    "ar": "سياسة الجودة, الجودة, التحسين المستمر"
+  },
+  "path": "kalitepolitikamiz",
+  "icon": "verified",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [],
+    "footer": []
+  },
+  "index": 2,
+  "url": "",
+  "text": {
+    "tr": "<h2>Kalite Politikamız</h2>\n<p>Her partide nem, aflatoksin ve etiket kontrolü; kayıtlar iki yıl saklanır (örnek, DEMO).</p>",
+    "en": "<h2>Our quality policy</h2>\n<p>Moisture, aflatoxin and label checks on every batch; records are kept for two years (sample, DEMO).</p>",
+    "ar": "<h2>سياسة الجودة لدينا</h2>\n<p>فحص الرطوبة والأفلاتوكسين والبطاقة لكل دفعة، وتُحفظ السجلات عامين (نموذج، DEMO).</p>"
+  },
+  "title": {
+    "tr": "Kalite Politikamız",
+    "en": "Quality Policy",
+    "ar": "سياسة الجودة"
+  },
+  "date": "2026-11-16T18:14:10.126Z",
+  "update": "2026-11-16T18:18:00.117Z",
+  "sablonIzi": "acedf6b7c400faec",
+  "sablonIziDil": {
+    "en": "587042c99dce90ca",
+    "ar": "a5348f544603b25e"
+  }
+}

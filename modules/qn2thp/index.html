@@ -1,0 +1,75 @@
+<section class="modulex-deger-bilet{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-deger-bilet-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* deger-bilet — deger-iki-ton ve deger-cevir-kart dikey kartlardır; bu modül yatay bilet iskeleti kurar (gövde + delikli çizgiyle ayrılan koçan, çentikler, barkod) ve etkileşimi koçanın yırtılma hareketidir — kart çevirme ya da renk bölmesi yok. */
+  .modulex-deger-bilet { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-deger-bilet *, .modulex-deger-bilet *::before, .modulex-deger-bilet *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-deger-bilet :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-deger-bilet :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-deger-bilet :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-deger-bilet :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-deger-bilet img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-deger-bilet) img { height: auto; }
+  .modulex-deger-bilet [hidden] { display: none !important; }
+  .modulex-deger-bilet :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-deger-bilet :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-deger-bilet-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-deger-bilet-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-deger-bilet--bassiz .modulex-deger-bilet-bas { display: none; }
+  .modulex-deger-bilet-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-deger-bilet-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-deger-bilet-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-deger-bilet-bas { max-width: 780px; margin-inline: auto; text-align: center; justify-items: center; }
+  .modulex-deger-bilet-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-deger-bilet-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-deger-bilet-dugme:hover { transform: translateY(-2px); }
+  .modulex-deger-bilet-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-deger-bilet-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-deger-bilet-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-deger-bilet-liste { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 22px 26px; }
+  .modulex-deger-bilet-bilet { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 120px; min-height: 190px; transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); }
+  .modulex-deger-bilet-bilet:hover, .modulex-deger-bilet-bilet:focus-within { transform: translateY(-5px); }
+  .modulex-deger-bilet-govde { display: grid; align-content: center; gap: 8px; padding: 24px 26px; border-start-start-radius: 14px; border-end-start-radius: 14px; background: color-mix(in srgb, --text-- 10%, --bg--); }
+  .modulex-deger-bilet-etiket { width: fit-content; padding: 3px 10px; border: 1px solid --accent--; border-radius: 4px; color: --accentInk--; font-family: var(--mx-font-mono, ui-monospace, monospace); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-deger-bilet-kbaslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.35rem, 2.2vw, 1.7rem); font-weight: 800; letter-spacing: -0.01em; line-height: 1.15; }
+  .modulex-deger-bilet-kmetin { color: --muted--; font-size: 0.95rem; line-height: 1.6; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-deger-bilet-etiket { font-family: inherit; letter-spacing: 0; }
+  .modulex-deger-bilet-kocan { position: relative; display: grid; justify-items: center; align-content: center; gap: 6px; padding: 18px 10px; border-inline-start: 2px dashed color-mix(in srgb, --vurguText-- 45%, transparent); border-start-end-radius: 14px; border-end-end-radius: 14px; background: --vurguBg--; color: --vurguText--; transform-origin: 0 100%; transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 1); }
+  [dir="rtl"] .modulex-deger-bilet-kocan { transform-origin: 100% 100%; }
+  .modulex-deger-bilet-govde, .modulex-deger-bilet-kocan { -webkit-mask: radial-gradient(circle at var(--cx) 0, transparent 12px, black 12.5px) top / 100% 51% no-repeat, radial-gradient(circle at var(--cx) 100%, transparent 12px, black 12.5px) bottom / 100% 51% no-repeat; mask: radial-gradient(circle at var(--cx) 0, transparent 12px, black 12.5px) top / 100% 51% no-repeat, radial-gradient(circle at var(--cx) 100%, transparent 12px, black 12.5px) bottom / 100% 51% no-repeat; }
+  .modulex-deger-bilet-govde { --cx: 100%; }
+  .modulex-deger-bilet-kocan { --cx: 0%; }
+  [dir="rtl"] .modulex-deger-bilet-govde { --cx: 0%; }
+  [dir="rtl"] .modulex-deger-bilet-kocan { --cx: 100%; }
+  .modulex-deger-bilet-bilet:hover .modulex-deger-bilet-kocan, .modulex-deger-bilet-bilet:focus-within .modulex-deger-bilet-kocan { transform: rotate(5deg) translateX(6px); }
+  [dir="rtl"] .modulex-deger-bilet-bilet:hover .modulex-deger-bilet-kocan, [dir="rtl"] .modulex-deger-bilet-bilet:focus-within .modulex-deger-bilet-kocan { transform: rotate(-5deg) translateX(-6px); }
+  .modulex-deger-bilet-ikon { font-size: 28px; }
+  .modulex-deger-bilet-kno { font-family: var(--mx-font-heading, inherit); font-size: 2.6rem; font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; }
+  .modulex-deger-bilet-barkod { width: 70%; height: 30px; background: repeating-linear-gradient(90deg, currentColor 0 2px, transparent 2px 4px, currentColor 4px 5px, transparent 5px 8px, currentColor 8px 11px, transparent 11px 13px); opacity: 0.85; }
+  @media (max-width: 768px) {
+    .modulex-deger-bilet-bilet { grid-template-columns: minmax(0, 1fr) 86px; min-height: 0; }
+    .modulex-deger-bilet-govde { padding: 20px 18px; }
+    .modulex-deger-bilet-kno { font-size: 2rem; }
+  }
+  .modulex-deger-bilet-bag { color: inherit; text-decoration: none; }
+  .modulex-deger-bilet-bag::after { content: ""; position: absolute; inset: 0; z-index: 3; }
+  .modulex-deger-bilet-bag:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-deger-bilet :is(.modulex-deger-bilet-baslik, .modulex-deger-bilet-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-deger-bilet-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-deger-bilet { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-deger-bilet *, .modulex-deger-bilet *::before, .modulex-deger-bilet *::after { animation: none !important; transition: none !important; }
+  }
+</style>
