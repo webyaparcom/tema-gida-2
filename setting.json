@@ -1,0 +1,54 @@
+{
+  "order": false,
+  "user": false,
+  "description": {
+    "tr": "Sofrana Antep: Gaziantep’te fıstık ezmesi, iç fıstık, pekmez, reçel, baklava, bal ve zeytinyağı üretimi. Toptan, otel-restoran ve özel etiket için ürün kataloğu. Demo site; içerik kurgusaldır.",
+    "en": "Sofrana Antep: pistachio paste, shelled pistachios, molasses, jam, baklava, honey and olive oil made in Gaziantep. Product catalogue for wholesale, hotels, restaurants and private label. Demo site; content is fictional.",
+    "ar": "سوفرانا عنتاب: إنتاج معجون الفستق والفستق المقشور والدبس والمربى والبقلاوة والعسل وزيت الزيتون في غازي عنتاب. كتالوج منتجات للجملة والفنادق والمطاعم والعلامات الخاصة. موقع تجريبي؛ المحتوى افتراضي."
+  },
+  "keyword": {
+    "tr": "fıstık ezmesi, iç fıstık, pekmez, baklava, toptan gıda, özel etiket, gaziantep",
+    "en": "pistachio paste, shelled pistachio, molasses, baklava, wholesale food, private label, gaziantep",
+    "ar": "معجون الفستق، فستق مقشور، دبس، بقلاوة، أغذية بالجملة، علامة خاصة، غازي عنتاب"
+  },
+  "category": "Kurumsal",
+  "name": "Sofrana Antep",
+  "domain": "gida-2.webyapar.com",
+  "langs": {
+    "tr": true,
+    "en": true,
+    "ar": true,
+    "de": false,
+    "ru": false,
+    "es": false,
+    "fr": false,
+    "it": false,
+    "ja": false,
+    "zh": false,
+    "ko": false,
+    "pt": false
+  },
+  "logo": "logo.png",
+  "multi": false,
+  "publishMode": "static",
+  "font": {
+    "body": "noto-sans",
+    "heading": "playfair-display",
+    "ar": {
+      "body": "ibm-plex-sans-arabic",
+      "heading": "noto-kufi-arabic"
+    }
+  },
+  "colorScheme": "auto",
+  "theme_color": "#B8434F",
+  "seo": {
+    "noindex": true
+  },
+  "cssTokens": {
+    "--mx-radius-sm": "2px",
+    "--mx-radius-md": "4px",
+    "--mx-radius-lg": "6px",
+    "--mx-radius-xl": "8px"
+  },
+  "icon": "icon.png"
+}

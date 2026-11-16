@@ -1,0 +1,40 @@
+{
+  "id": "eploi6n954",
+  "name": {
+    "tr": "Katalog",
+    "en": "Catalogue",
+    "ar": "الكتالوج"
+  },
+  "description": {
+    "tr": "Sekiz ürünün etiket bilgileri ve taze parti takvimi.",
+    "en": "Label details of eight products and the fresh batch calendar.",
+    "ar": "بيانات بطاقات ثمانية منتجات وتقويم الدفعات الطازجة."
+  },
+  "keyword": {
+    "tr": "Katalog",
+    "en": "Catalogue",
+    "ar": "الكتالوج"
+  },
+  "path": "hizmetler",
+  "icon": "work",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "vsgvue",
+      "q44rj7"
+    ],
+    "footer": []
+  },
+  "index": 0,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Katalog",
+    "en": "Catalogue",
+    "ar": "الكتالوج"
+  },
+  "date": "2026-11-16T18:14:10.288Z",
+  "update": "2026-11-16T18:18:00.095Z"
+}
