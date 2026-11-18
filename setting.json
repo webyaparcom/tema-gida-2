@@ -4,12 +4,16 @@
   "description": {
     "tr": "Sofrana Antep: Gaziantep’te fıstık ezmesi, iç fıstık, pekmez, reçel, baklava, bal ve zeytinyağı üretimi. Toptan, otel-restoran ve özel etiket için ürün kataloğu. Demo site; içerik kurgusaldır.",
     "en": "Sofrana Antep: pistachio paste, shelled pistachios, molasses, jam, baklava, honey and olive oil made in Gaziantep. Product catalogue for wholesale, hotels, restaurants and private label. Demo site; content is fictional.",
-    "ar": "سوفرانا عنتاب: إنتاج معجون الفستق والفستق المقشور والدبس والمربى والبقلاوة والعسل وزيت الزيتون في غازي عنتاب. كتالوج منتجات للجملة والفنادق والمطاعم والعلامات الخاصة. موقع تجريبي؛ المحتوى افتراضي."
+    "ar": "سوفرانا عنتاب: إنتاج معجون الفستق والفستق المقشور والدبس والمربى والبقلاوة والعسل وزيت الزيتون في غازي عنتاب. كتالوج منتجات للجملة والفنادق والمطاعم والعلامات الخاصة. موقع تجريبي؛ المحتوى افتراضي.",
+    "de": "Sofrana Antep: Herstellung von Pistaziencreme, Pistazienkernen, Pekmez, Marmelade, Baklava, Honig und Olivenöl in Gaziantep. Produktkatalog für Großhandel, Hotels und Restaurants sowie Eigenmarken. Demo-Website; der Inhalt ist fiktiv.",
+    "ru": "Sofrana Antep: производство фисташковой пасты, ядер фисташек, пекмеза, джема, пахлавы, мёда и оливкового масла в Газиантепе. Каталог продукции для оптовых продаж, отелей, ресторанов и под частной маркой. Демо-сайт; содержание вымышленное."
   },
   "keyword": {
     "tr": "fıstık ezmesi, iç fıstık, pekmez, baklava, toptan gıda, özel etiket, gaziantep",
     "en": "pistachio paste, shelled pistachio, molasses, baklava, wholesale food, private label, gaziantep",
-    "ar": "معجون الفستق، فستق مقشور، دبس، بقلاوة، أغذية بالجملة، علامة خاصة، غازي عنتاب"
+    "ar": "معجون الفستق، فستق مقشور، دبس، بقلاوة، أغذية بالجملة، علامة خاصة، غازي عنتاب",
+    "de": "Erdnussmus, Pistazienkerne, Pekmez, Baklava, Lebensmittelgroßhandel, Eigenmarke, Gaziantep",
+    "ru": "арахисовая паста, ядра фисташек, пекмез, пахлава, оптовые продукты питания, частная марка, Газиантеп"
   },
   "category": "Kurumsal",
   "name": "Sofrana Antep",
@@ -18,15 +22,27 @@
     "tr": true,
     "en": true,
     "ar": true,
-    "de": false,
-    "ru": false,
+    "de": true,
+    "ru": true,
     "es": false,
     "fr": false,
     "it": false,
     "ja": false,
     "zh": false,
     "ko": false,
-    "pt": false
+    "pt": false,
+    "fa": false,
+    "he": false,
+    "ur": false,
+    "nl": false,
+    "pl": false,
+    "uk": false,
+    "az": false,
+    "ka": false,
+    "el": false,
+    "bg": false,
+    "ro": false,
+    "hi": false
   },
   "logo": "logo.png",
   "multi": false,

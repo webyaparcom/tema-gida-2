@@ -3,17 +3,23 @@
   "name": {
     "tr": "Katalog",
     "en": "Catalogue",
-    "ar": "الكتالوج"
+    "ar": "الكتالوج",
+    "de": "Katalog",
+    "ru": "Каталог"
   },
   "description": {
     "tr": "Sekiz ürünün etiket bilgileri ve taze parti takvimi.",
     "en": "Label details of eight products and the fresh batch calendar.",
-    "ar": "بيانات بطاقات ثمانية منتجات وتقويم الدفعات الطازجة."
+    "ar": "بيانات بطاقات ثمانية منتجات وتقويم الدفعات الطازجة.",
+    "de": "Etikettendaten von acht Produkten und der Kalender frischer Chargen.",
+    "ru": "Информация на этикетках восьми продуктов и календарь свежих партий."
   },
   "keyword": {
     "tr": "Katalog",
     "en": "Catalogue",
-    "ar": "الكتالوج"
+    "ar": "الكتالوج",
+    "de": "Katalog",
+    "ru": "Каталог"
   },
   "path": "hizmetler",
   "icon": "work",
@@ -33,7 +39,9 @@
   "title": {
     "tr": "Katalog",
     "en": "Catalogue",
-    "ar": "الكتالوج"
+    "ar": "الكتالوج",
+    "de": "Katalog",
+    "ru": "Каталог"
   },
   "date": "2026-11-16T18:14:10.288Z",
   "update": "2026-11-16T18:18:00.095Z"
