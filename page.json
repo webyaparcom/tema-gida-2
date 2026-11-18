@@ -5,12 +5,16 @@
       "name": {
         "tr": "Katalog",
         "en": "Catalogue",
-        "ar": "الكتالوج"
+        "ar": "الكتالوج",
+        "de": "Katalog",
+        "ru": "Каталог"
       },
       "description": {
         "tr": "Sekiz ürünün etiket bilgileri ve taze parti takvimi.",
         "en": "Label details of eight products and the fresh batch calendar.",
-        "ar": "بيانات بطاقات ثمانية منتجات وتقويم الدفعات الطازجة."
+        "ar": "بيانات بطاقات ثمانية منتجات وتقويم الدفعات الطازجة.",
+        "de": "Etikettendaten von acht Produkten und der Kalender frischer Chargen.",
+        "ru": "Информация на этикетках восьми продуктов и календарь свежих партий."
       },
       "path": "hizmetler",
       "icon": "work",
@@ -30,7 +34,9 @@
       "name": {
         "tr": "Firma",
         "en": "Company",
-        "ar": "الشركة"
+        "ar": "الشركة",
+        "de": "Firma",
+        "ru": "Компания"
       },
       "status": "play",
       "id": "hakkimizda",
@@ -52,7 +58,9 @@
       "description": {
         "tr": "İlkeler, yıllık tartı ve sevkiyat yolu (kurgusal).",
         "en": "Principles, the yearly weighing and the dispatch route (fictional).",
-        "ar": "المبادئ والوزن السنوي ومسار الشحن (افتراضي)."
+        "ar": "المبادئ والوزن السنوي ومسار الشحن (افتراضي).",
+        "de": "Prinzipien, jährliche Wägung und Versandweg (fiktiv).",
+        "ru": "Принципы, ежегодное взвешивание и маршрут отправки (вымышленное)."
       }
     },
     {
@@ -60,12 +68,16 @@
       "name": {
         "tr": "Referanslar",
         "en": "References",
-        "ar": "المرجعيات"
+        "ar": "المرجعيات",
+        "de": "Referenzen",
+        "ru": "Референсы"
       },
       "description": {
         "tr": "İş ortaklarımız ve müşteri yorumlarımız (kurgusal).",
         "en": "Our partners and customer reviews (fictional).",
-        "ar": "شركاؤنا وتقييمات عملائنا (افتراضية)."
+        "ar": "شركاؤنا وتقييمات عملائنا (افتراضية).",
+        "de": "Unsere Geschäftspartner und Kundenstimmen (fiktiv).",
+        "ru": "Наши деловые партнёры и отзывы клиентов (вымышленные)."
       },
       "path": "referanslar",
       "icon": "stars",
@@ -85,7 +97,9 @@
       "name": {
         "tr": "İletişim",
         "en": "Contact",
-        "ar": "اتصل بنا"
+        "ar": "اتصل بنا",
+        "de": "Kontakt",
+        "ru": "Контакты"
       },
       "status": "play",
       "id": "iletisim",
@@ -106,7 +120,9 @@
       "description": {
         "tr": "Teklif, adres ve satış saatleri.",
         "en": "Quote, address and sales hours.",
-        "ar": "عرض السعر والعنوان وساعات المبيعات."
+        "ar": "عرض السعر والعنوان وساعات المبيعات.",
+        "de": "Angebot, Adresse und Verkaufszeiten.",
+        "ru": "Предложение, адрес и часы продаж."
       }
     }
   ],

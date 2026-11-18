@@ -2,7 +2,9 @@
   "name": {
     "tr": "Firma",
     "en": "Company",
-    "ar": "الشركة"
+    "ar": "الشركة",
+    "de": "Firma",
+    "ru": "Компания"
   },
   "status": "play",
   "category": "",
@@ -24,7 +26,9 @@
   "description": {
     "tr": "İlkeler, yıllık tartı ve sevkiyat yolu (kurgusal).",
     "en": "Principles, the yearly weighing and the dispatch route (fictional).",
-    "ar": "المبادئ والوزن السنوي ومسار الشحن (افتراضي)."
+    "ar": "المبادئ والوزن السنوي ومسار الشحن (افتراضي).",
+    "de": "Prinzipien, jährliche Wägung und Versandweg (fiktiv).",
+    "ru": "Принципы, ежегодное взвешивание и маршрут отправки (вымышленное)."
   },
   "spot": {
     "tr": "",
@@ -35,12 +39,16 @@
   "title": {
     "tr": "Firma",
     "en": "Company",
-    "ar": "الشركة"
+    "ar": "الشركة",
+    "de": "Firma",
+    "ru": "Компания"
   },
   "keyword": {
     "tr": "hakkımızda",
     "en": "about",
-    "ar": "من نحن"
+    "ar": "من نحن",
+    "de": "Über uns",
+    "ru": "О нас"
   },
   "text": {},
   "update": "2026-11-16T18:18:00.099Z",
